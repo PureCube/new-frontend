@@ -12,7 +12,7 @@ export default function NotFoundPage() {
       </Head>
 
       <Container>
-        
+        404
       </Container>
     </>
   )
