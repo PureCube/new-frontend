@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Meta } from "widgets/meta";
+import { Meta } from "shared";
 
 export default function Home() {
   return (
