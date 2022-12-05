@@ -9,7 +9,8 @@ html {
 }
 
 body {
-	@apply bg-background
-				 text-text
+	@apply bg-black
+				 text-white
+				 font-body-regular
 				 text-lg;
 }
