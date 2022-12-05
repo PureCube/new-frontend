@@ -1,6 +1,8 @@
 import Head from "next/head";
-import { Container, Main, Meta } from "shared";
-import { Footer, Header } from "widgets";
+import { Meta } from "shared/model";
+import { Container, Main } from "shared/ui";
+import { Footer } from "widgets/footer";
+import { Header } from "widgets/header";
 
 export default function GamesPage() {
   return (
