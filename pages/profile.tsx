@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { Container, Meta } from "shared";
+import { Container, Main, Meta } from "shared";
+import { Footer, Header } from "widgets";
 
 export default function ProfilePage() {
   return (
@@ -11,7 +12,9 @@ export default function ProfilePage() {
       </Head>
 
       <Container>
-        
+        <Header />
+        <Main>main</Main>
+        <Footer />
       </Container>
     </>
   )
