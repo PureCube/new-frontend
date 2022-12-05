@@ -3,6 +3,7 @@ import { Meta } from "shared/model";
 import { Container, Main } from "shared/ui";
 import { Footer } from "widgets/footer";
 import { Header } from "widgets/header";
+import { Navbar } from "widgets/navbar";
 
 
 export default function AboutPage() {
@@ -15,7 +16,9 @@ export default function AboutPage() {
       </Head>
 
       <Container>
-        <Header />
+        <Header
+          navbar={<Navbar />}
+        />
         <Main>main</Main>
         <Footer />
       </Container>
