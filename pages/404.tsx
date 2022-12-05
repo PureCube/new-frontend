@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { Container, Meta } from "shared";
+import { Meta } from "shared/model";
+import { Container } from "shared/ui";
 
 export default function NotFoundPage() {
   return (
