@@ -1,5 +1,5 @@
 export const DesktopNavbar = () => {
 	return (
-		<nav>desktop navbar</nav>
+		<nav className="hidden lg:block">desktop navbar</nav>
 	)
 }
