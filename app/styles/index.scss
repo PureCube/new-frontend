@@ -2,16 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "reset.scss";
 @import "fonts.scss";
-@import "vars.scss";
 
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-	background-color: var(--color-grey-50);
-  font-family: "Roboto";
-	font-size: 1rem;
+	@apply bg-background
+				 text-text
+				 text-lg;
 }
