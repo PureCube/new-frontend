@@ -9,7 +9,7 @@ export interface HeaderProps {
 
 export const Header = ({navbar}: HeaderProps) => {
 	return (
-		<header className="bg-white">
+		<header className="flex justify-between items-center py-3 md:py-5 select-none">
 
 			<Link href="/">
 				<div className="relative h-12 w-20 md:w-24">
@@ -19,8 +19,10 @@ export const Header = ({navbar}: HeaderProps) => {
 
 			{navbar}
 
-			<ConnectWallet>Connect wallet</ConnectWallet>
-			<UserAvatar />
+			<div className="hidden lg:flex items-center space-x-5">
+				<ConnectWallet>Connect wallet</ConnectWallet>
+				<UserAvatar size={11} />
+			</div>
 
 		</header>
 	)
