@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { Meta } from "shared";
+import { Container, Meta } from "shared";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Head>
@@ -9,6 +9,10 @@ export default function Home() {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <Meta />
       </Head>
+
+      <Container>
+
+      </Container>
     </>
   )
 }
