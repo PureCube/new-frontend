@@ -1,5 +1,5 @@
 export const MobileNavbar = () => {
 	return (
-		<nav>mobile navbar</nav>
+		<nav className="block lg:hidden">mobile navbar</nav>
 	)
 }
