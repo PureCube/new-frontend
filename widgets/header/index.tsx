@@ -1,3 +1,5 @@
+import { UserAvatar } from "entities/user";
+import { ConnectWallet } from "features/connect-wallet";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +19,9 @@ export const Header = ({navbar}: HeaderProps) => {
 
 			{navbar}
 
-			
+			<ConnectWallet>Connect wallet</ConnectWallet>
+			<UserAvatar />
+
 		</header>
 	)
 }
