@@ -1,5 +1,9 @@
-export const Button = () => {
+export interface ButtonProps {
+	children: string,
+}
+
+export const Button = ({children}: ButtonProps) => {
 	return (
-		<button>button</button>
+		<button>{children}</button>
 	)
 }
