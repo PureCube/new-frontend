@@ -23,6 +23,11 @@ export const userModel: userModelProps = makeAutoObservable({
 	JWTtoken: null,
 
 	// ACTIONS
+	logout: () => {
+    typeof window !== "undefined" ? localStorage.removeItem("JWTtoken") : null;
+    userModel.JWTtoken = null;
+  },
+
 	registerUser: async (email: string, password: string, name: string) => {
 		try {
 			const res = await fetch("https://gateway.pureblock.io/api/auth/register", {
@@ -84,6 +89,51 @@ export const userModel: userModelProps = makeAutoObservable({
 
     } catch (error) {
       console.log("fetchUserData error: " + error);  
+    }
+  },
+
+	changeName: async (name: string) => {
+    try {
+      const res = await fetch("https://gateway.pureblock.io/api/auth/change-name", {
+        method: "POST",
+        body: JSON.stringify({name}),
+        headers: {
+          "Content-Type": "application/json",
+          Auth: `${userModel.JWTtoken}`,
+        },
+      });
+
+      const data = await res.json();
+			
+      if (data.success) {
+				userModel.userName = name;
+				console.log("your password has been successfully changed: " + data);
+      }
+
+    } catch (error) {
+      console.log("changeName error: " + error);  
+    }
+  },
+
+  changePassword: async (oldPassword: string, newPassword: string) => {
+    try {
+      const res = await fetch("https://gateway.pureblock.io/api/auth/change-password", {
+        method: "POST",
+        body: JSON.stringify({oldPassword, newPassword}),
+        headers: {
+          "Content-Type": "application/json",
+          Auth: `${userModel.JWTtoken}`,
+        },
+      });
+
+      const data = await res.json();
+
+			if (data.success) {
+				console.log("your password has been successfully changed: " + data);
+      }
+
+    } catch (error) {
+      console.log("changePassword error: " + error);  
     }
   },
 
