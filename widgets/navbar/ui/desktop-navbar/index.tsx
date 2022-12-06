@@ -1,4 +1,4 @@
-import { DropdownNavbar } from "features/dropdown-navbar";
+import { NavbarDropdown } from "../navbar-dropdown";
 import Link from "next/link";
 
 export const DesktopNavbar = () => {
@@ -15,7 +15,7 @@ export const DesktopNavbar = () => {
 				</li>
 
 				<li className="hover:underline">
-					<DropdownNavbar
+					<NavbarDropdown
 						title="Projects"
 						items={[
 							{
