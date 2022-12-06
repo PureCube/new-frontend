@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "fonts.scss";
+@import "fonts.css";
+@import "swiper.css";
 
 html {
 	scroll-behavior: smooth;

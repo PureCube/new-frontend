@@ -1,0 +1,18 @@
+.swiper-button-next, .swiper-button-prev {
+  @apply !flex
+         !top-auto !bottom-3 md:!bottom-5
+       !bg-white
+         !w-9 !h-9
+         !rounded-full;
+}
+.swiper-button-prev {
+  @apply !left-auto !right-16 md:!right-[70px];
+}
+.swiper-button-next {
+  @apply !right-3 md:!right-5;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  @apply !text-black
+          !text-[18px]
+          font-black;
+}
