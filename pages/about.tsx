@@ -16,11 +16,17 @@ export default function AboutPage() {
       </Head>
 
       <Container>
+
         <Header
           navbar={<Navbar />}
         />
-        <Main>main</Main>
+
+        <Main>
+          
+        </Main>
+
         <Footer />
+
       </Container>
     </>
   )
