@@ -10,7 +10,7 @@ import { Header } from "widgets/header";
 import { Navbar } from "widgets/navbar";
 import { HomeHero } from "widgets/hero";
 import { InfoBlock } from "widgets/info-block";
-import { GamesCards } from "widgets/games-cards";
+import { GamesCards } from "widgets/games";
 import { Partners } from "widgets/partners";
 import { NewsList } from "widgets/news-list";
 
