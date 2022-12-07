@@ -21,7 +21,7 @@ export const Header = ({navbar}: HeaderProps) => {
 
 			<div className="hidden lg:flex items-center space-x-5">
 				<ConnectWallet>Connect wallet</ConnectWallet>
-				<UserAvatar size={11} />
+				<UserAvatar size={45} />
 			</div>
 
 		</header>
