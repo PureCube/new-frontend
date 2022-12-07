@@ -2,10 +2,10 @@ import {makeAutoObservable} from 'mobx';
 
 export interface userModelProps {
 	userId: number | null,
-	userName: string | null,
-	userEmail: string | null,
-	userGold: number | null,
-	userAvatar: string,
+	name: string | null,
+	email: string | null,
+	gold: number | null,
+	avatar: string,
 	JWTtoken: string | null,
 	
 	registerUser: Function,
@@ -16,10 +16,10 @@ export interface userModelProps {
 export const userModel: userModelProps = makeAutoObservable({
 	// STORE
 	userId: null,
-	userName: null,
-	userEmail: null,
-	userGold: null,
-	userAvatar: "/images/user/user-avatar.svg",
+	name: null,
+	email: null,
+	gold: null,
+	avatar: "/images/user/user-avatar.svg",
 	JWTtoken: null,
 
 	// ACTIONS
@@ -82,9 +82,9 @@ export const userModel: userModelProps = makeAutoObservable({
 
       if (data.success) {
         userModel.userId = data.body.id;
-        userModel.userName = data.body.name;
-        userModel.userEmail = data.body.email;
-        userModel.userGold = data.body.gold;
+        userModel.name = data.body.name;
+        userModel.email = data.body.email;
+        userModel.gold = data.body.gold;
       }
 
     } catch (error) {
@@ -106,7 +106,7 @@ export const userModel: userModelProps = makeAutoObservable({
       const data = await res.json();
 			
       if (data.success) {
-				userModel.userName = name;
+				userModel.name = name;
 				console.log("your password has been successfully changed: " + data);
       }
 
