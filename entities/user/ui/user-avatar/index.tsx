@@ -9,7 +9,7 @@ export interface UserAvatarProps {
 export const UserAvatar = observer( ({size}: UserAvatarProps) => {
 	return (
 		<div>
-			<Image src={userModel.userAvatar} width={size} height={size} alt="user avatar" />
+			<Image src={userModel.avatar} width={size} height={size} alt="user avatar" />
 		</div>
 	)
 } )
