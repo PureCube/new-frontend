@@ -2,7 +2,7 @@ import { gameModelProps } from "entities/game";
 import Image from "next/image";
 import { LinkButton } from "shared/ui";
 
-export const GamesListItem = (game: gameModelProps) => {
+export const GameListItem = (game: gameModelProps) => {
 	return (
 		<div className="grid grid-cols-1 xl:grid-cols-2 gap-3 md:gap-5 items-center bg-neutral-900 p-3 md:p-5 rounded-3xl">
 
@@ -30,7 +30,7 @@ export const GamesListItem = (game: gameModelProps) => {
 					</div>
 					<div className="flex flex-col">
 						<span className="text-base md:text-lg font-body-semibold">Status</span>
-						<span className="text-base md:text-lg uppercase">{status}</span>
+						<span className="text-base md:text-lg uppercase">{game.status}</span>
 					</div>
 				</div>
 
