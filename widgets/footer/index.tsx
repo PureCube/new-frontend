@@ -1,6 +1,7 @@
 import { FooterLinksCard } from "./ui/footer-links-card";
 import Link from "next/link";
 import Image from "next/image";
+import { config } from "shared/config";
 
 export const Footer = () => {
 	return (
@@ -45,12 +46,12 @@ export const Footer = () => {
 							},
 							{
 								title: "Media Kit",
-								link: "https://drive.google.com/drive/folders/1GEAxFFx19MeGGVdqpw-sR7zRhaHs1_iy?usp=sharing",
+								link: config.mediaKit,
 								target: "_blank",
 							},
 							{
 								title: "Contact Us",
-								link: "mailto:hello@pureblock.io",
+								link: `mailto:${config.email}`,
 								target: "_blank",
 							},
 						]}
@@ -64,12 +65,12 @@ export const Footer = () => {
 							},
 							{
 								title: "Medium",
-								link: "https://medium.com/@pureblock",
+								link: config.medium,
 								target: "_blank",
 							},
 							{
 								title: "Github",
-								link: "https://github.com/purecube",
+								link: config.github,
 								target: "_blank",
 							},
 						]}
@@ -79,19 +80,19 @@ export const Footer = () => {
 						elems={[
 							{
 								title: "Twitter",
-								link: "https://twitter.com/purecube_io",
+								link: config.twitter,
 								target: "_blank",
 								icon: "twitter",
 							},
 							{
 								title: "Discord",
-								link: "https://discord.gg/KDe48PgnE5",
+								link: config.discord,
 								target: "_blank",
 								icon: "discord",
 							},
 							{
 								title: "Telegram",
-								link: "https://t.me/PureCube",
+								link: config.telegram,
 								target: "_blank",
 								icon: "telegram",
 							},
