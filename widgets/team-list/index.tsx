@@ -1,5 +1,5 @@
 import { teamMemberModelProps } from "entities/team-member";
-import { TeamMemberCard } from "./ui/team-member-card";
+import { TeamMemberCard } from "entities/team-member";
 
 export interface TeamBlockProps {
 	title: string,
@@ -7,7 +7,7 @@ export interface TeamBlockProps {
 	others?: boolean,
 }
 
-export const TeamBlock = ({title, cards, others=false}: TeamBlockProps) => {
+export const TeamList = ({title, cards, others=false}: TeamBlockProps) => {
 	return (
 		<section className="bg-neutral-900 p-3 md:p-5 rounded-3xl space-y-3 md:space-y-5">
 			<h3 className="text-2xl md:text-3xl font-heading-semibold uppercase">{title}</h3>

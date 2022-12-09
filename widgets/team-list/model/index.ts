@@ -1,12 +1,12 @@
 import { teamMemberModelProps } from 'entities/team-member';
 import {makeAutoObservable} from 'mobx';
 
-export interface teamBlockModelProps {
+export interface teamListModelProps {
 	ourTeam: teamMemberModelProps[],
 	advisors: teamMemberModelProps[],
 }
 
-export const teamBlockModel: teamBlockModelProps = makeAutoObservable({
+export const teamListModel: teamListModelProps = makeAutoObservable({
 	// STORE
 	advisors: [
 		{
