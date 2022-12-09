@@ -9,17 +9,17 @@ export interface DownloadProps {
 }
 
 export interface gameModelProps {
-	gameId: string | null,
-	title: string | null,
-	description: string | null,
-	genre: "hybrid-casual" | string | null,
-	platform: "mobile" | "pc" | null,
-	developer: string | null,
-	status: "demo" | "beta" | "live" | "development" | "presale" | null,
-	cover: string | null,
+	gameId: string,
+	title: string,
+	description: string,
+	genre: "hybrid-casual" | string,
+	platform: "mobile" | "pc",
+	developer: string,
+	status: "demo" | "beta" | "live" | "development",
+	cover: string,
 
-	network?: "near" | null,
-	engine?: "unity" | string | null,
+	network?: "near",
+	engine?: "unity" | string,
 	about?: AboutProps[],
 	download?: DownloadProps,
 }
