@@ -1,4 +1,4 @@
-import { GamesListItem } from "../games-list-item";
+import { GameListItem } from "entities/game";
 import { gamesListModel } from "widgets/games";
 import { observer } from "mobx-react-lite";
 
@@ -8,7 +8,7 @@ export const GamesList = observer( () => {
 			{
 				gamesListModel.games.map( (game, index) => {
 					return (
-						<GamesListItem
+						<GameListItem
 							key={index}
 							title={game.title}
 							description={game.description}
