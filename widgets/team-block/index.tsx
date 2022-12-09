@@ -1,9 +1,9 @@
+import { teamMemberModelProps } from "entities/team-member";
 import { TeamMemberCard } from "./ui/team-member-card";
-import type { TeamMemberCardProps } from "./ui/team-member-card";
 
 export interface TeamBlockProps {
 	title: string,
-	cards: TeamMemberCardProps[],
+	cards: teamMemberModelProps[],
 	others?: boolean,
 }
 
