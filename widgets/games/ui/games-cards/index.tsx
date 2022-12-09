@@ -1,5 +1,5 @@
-import { GameCard } from "../game-card";
-import type { GameCardProps } from "../game-card";
+import { GameCard } from "entities/game";
+import type { GameCardProps } from "entities/game";
 import { LinkButton } from "shared/ui";
 import Image from "next/image";
 
