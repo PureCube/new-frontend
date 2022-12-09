@@ -99,10 +99,7 @@ export default function HomePage() {
             />
 
             <Partners />
-
-            <NewsList
-							title="Latest updates & news"
-						/>
+            <NewsList />
           </div>
 
         </Main>
