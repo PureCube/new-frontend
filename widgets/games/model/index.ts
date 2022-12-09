@@ -17,7 +17,7 @@ export const gamesListModel: gamesListModelProps = makeAutoObservable({
 			platform: "mobile",
 			developer: "PureCube",
 			status: "beta",
-			cover: "/images/006.png",
+			cover: "/images/games/chubby-runners.png",
 			network: "near",
 			engine: "unity",
 			about: [
@@ -40,7 +40,7 @@ export const gamesListModel: gamesListModelProps = makeAutoObservable({
 			platform: "mobile",
 			developer: "PureCube",
 			status: "demo",
-			cover: "/images/002.jpg",
+			cover: "/images/games/near-runner.jpg",
 			network: "near",
 			engine: "unity",
 		},
