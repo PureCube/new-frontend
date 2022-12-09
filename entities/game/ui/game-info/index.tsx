@@ -38,7 +38,7 @@ export const GameInfo = (game: gameModelProps) => {
 						</li>
 						<li className="flex justify-between items-center">
 							<span>Status: </span>
-							<span className="bg-neutral-800 rounded-lg px-2 pt-1">{status}</span>
+							<span className="bg-neutral-800 rounded-lg px-2 pt-1">{game.status}</span>
 						</li>
 						<li className="flex justify-between items-center">
 							<span>Network: </span>
