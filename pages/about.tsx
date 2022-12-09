@@ -5,8 +5,8 @@ import { Footer } from "widgets/footer";
 import { Header } from "widgets/header";
 import { SecondHero } from "widgets/hero";
 import { Navbar } from "widgets/navbar";
-import { TeamBlock } from "widgets/team-block";
-import { teamBlockModel } from "widgets/team-block/model";
+import { TeamList } from "widgets/team-list";
+import { teamListModel } from "widgets/team-list/model";
 import { ValuesBlock } from "widgets/values-block";
 
 export default function AboutPage() {
@@ -54,11 +54,11 @@ export default function AboutPage() {
               ]}
             />
 
-            <TeamBlock
+            <TeamList
               title="Advisors"
               cards=
                 {
-                  teamBlockModel.advisors.map( (member) => {
+                  teamListModel.advisors.map( (member) => {
                     return (
                       {
                         name: member.name,
@@ -73,11 +73,11 @@ export default function AboutPage() {
                 }
             />
 
-            <TeamBlock
+            <TeamList
               title="Our Team"
               cards=
                 {
-                  teamBlockModel.ourTeam.map( (member) => {
+                  teamListModel.ourTeam.map( (member) => {
                     return (
                       {
                         name: member.name,
