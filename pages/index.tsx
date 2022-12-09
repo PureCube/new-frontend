@@ -98,10 +98,7 @@ export default function HomePage() {
 							]}
             />
 
-            <Partners
-							title="Partners"
-							images={["/icons/near.svg"]}
-						/>
+            <Partners />
 
             <NewsList
 							title="Latest updates & news"
