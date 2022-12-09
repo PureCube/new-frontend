@@ -1,9 +1,10 @@
+import { GameInfo } from "entities/game";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Meta } from "shared/model";
 import { Container, Main } from "shared/ui";
 import { Footer } from "widgets/footer";
-import { GameInfo, gamesListModel } from "widgets/games";
+import { gamesListModel } from "widgets/games";
 import { Header } from "widgets/header";
 import { Navbar } from "widgets/navbar";
 
