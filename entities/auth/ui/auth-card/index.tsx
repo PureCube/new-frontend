@@ -28,10 +28,11 @@ export const AuthCard = () => {
 
 
 			<Modal isOpened={createModalState} setIsOpened={setCreateModalState}>
-				<RegisterForm />
+				<RegisterForm isOpened={createModalState} setIsOpened={setCreateModalState} />
 			</Modal>
+
 			<Modal isOpened={loginModalState} setIsOpened={setLoginModalState}>
-				<LoginForm />
+				<LoginForm isOpened={loginModalState} setIsOpened={setLoginModalState} />
 			</Modal>
 		</>
 	)
