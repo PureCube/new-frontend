@@ -1,13 +1,23 @@
 import { AuthCard } from "entities/auth";
+import { userModel, UserProfileCard } from "entities/user";
 import { WalletCard } from "entities/wallet";
+import { observer } from "mobx-react-lite";
 import Head from "next/head";
+import { useEffect } from "react";
 import { Meta } from "shared/model";
 import { Container, Main } from "shared/ui";
 import { Footer } from "widgets/footer";
 import { Header } from "widgets/header";
 import { Navbar } from "widgets/navbar";
 
-export default function ProfilePage() {
+export default observer( function ProfilePage () {
+  useEffect( () => {
+    if (typeof window !== "undefined") {
+      userModel.setJWTtoken(localStorage.getItem("JWTtoken"));
+    }
+    userModel.fetchUserData();
+  }, []);
+
   return (
     <>
       <Head>
@@ -26,7 +36,7 @@ export default function ProfilePage() {
           <div className="space-y-40 py-9 pb-40">
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-5">
               <WalletCard />
-              <AuthCard />
+              {userModel.JWTtoken ? <UserProfileCard /> : <AuthCard />}
             </section>
           </div>
         </Main>
@@ -36,4 +46,4 @@ export default function ProfilePage() {
       </Container>
     </>
   )
-}
+} )
