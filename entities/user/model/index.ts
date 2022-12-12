@@ -7,10 +7,14 @@ export interface userModelProps {
 	gold: number | null,
 	avatar: string,
 	JWTtoken: string | null,
-	
+
+  logout: Function,
+  setJWTtoken: Function,
 	registerUser: Function,
 	loginUser: Function,
 	fetchUserData: Function,
+  changeName: Function,
+  changePassword: Function,
 }
 
 export const userModel: userModelProps = makeAutoObservable({
@@ -26,6 +30,10 @@ export const userModel: userModelProps = makeAutoObservable({
 	logout: () => {
     typeof window !== "undefined" ? localStorage.removeItem("JWTtoken") : null;
     userModel.JWTtoken = null;
+  },
+
+  setJWTtoken: (token: any) => {
+    userModel.JWTtoken = token;
   },
 
 	registerUser: async (email: string, password: string, name: string) => {
