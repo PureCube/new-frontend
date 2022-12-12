@@ -1,3 +1,5 @@
+import { AuthCard } from "entities/auth";
+import { WalletCard } from "entities/wallet";
 import Head from "next/head";
 import { Meta } from "shared/model";
 import { Container, Main } from "shared/ui";
@@ -15,11 +17,22 @@ export default function ProfilePage() {
       </Head>
 
       <Container>
+
         <Header
           navbar={<Navbar />}
         />
-        <Main>main</Main>
+
+        <Main>
+          <div className="space-y-40 py-9 pb-40">
+            <section className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-5">
+              <WalletCard />
+              <AuthCard />
+            </section>
+          </div>
+        </Main>
+
         <Footer />
+
       </Container>
     </>
   )
