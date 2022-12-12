@@ -6,10 +6,9 @@ export interface ModalProps {
 	children: string | JSX.Element | JSX.Element[],
 	isOpened: boolean,
 	setIsOpened: any;
-	onSubmit?: any,
 }
 
-export const Modal = ({children, isOpened=false, setIsOpened, onSubmit}: ModalProps) => {
+export const Modal = ({children, isOpened=false, setIsOpened}: ModalProps) => {
 
 	const toggleModal = () => {
 		setIsOpened(!isOpened);
@@ -20,9 +19,7 @@ export const Modal = ({children, isOpened=false, setIsOpened, onSubmit}: ModalPr
 
 			<Container>
 				<div onClick={ (event) => event.stopPropagation() } className="mx-auto bg-neutral-900 rounded-3xl p-3 md:p-5 w-full lg:w-1/2">
-
 					{children}
-
 				</div>
 			</Container>
 
