@@ -1,12 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faDiscord, faGithub, faMedium, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { config } from "shared/config";
+import { LinkButton } from "shared/ui";
+import { ConnectWallet } from "features/connect-wallet";
 
 export const MobileNavbar = () => {
 	const [isOpened, setIsOpened] = useState(false);
+
+	useEffect( () => {
+		if (isOpened) document.body.style.overflow = 'hidden';
+		else document.body.style.overflow = '';
+	}, [isOpened])
 
 	const toggleDropdown = () => {
 		setIsOpened(!isOpened);
@@ -19,7 +26,7 @@ export const MobileNavbar = () => {
 			</div>
 
 			{isOpened &&
-			<nav className="absolute z-10 top-16 right-0 left-0 bottom-0 bg-black container mx-auto">
+			<nav className="absolute z-40 top-16 right-0 left-0 bottom-0 bg-black container mx-auto">
 				
 					<ul className="border-neutral-600 border-t py-3 md:py-5 space-y-3 md:space-y-5">
 						<li className="text-xl md:text-2xl font-heading-semibold">
@@ -37,6 +44,15 @@ export const MobileNavbar = () => {
 						</li>
 						<li className="text-xl md:text-2xl font-heading-semibold">
 							<Link href="/token">Token</Link>
+						</li>
+					</ul>
+
+					<ul className="border-neutral-600 border-t py-3 md:py-5 space-y-3 md:space-y-5">
+						<li>
+							<ConnectWallet>Connect wallet</ConnectWallet>
+						</li>
+						<li>
+							<LinkButton link="/profile" type="secondary">Profile</LinkButton>
 						</li>
 					</ul>
 
