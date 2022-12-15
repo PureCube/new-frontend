@@ -16,7 +16,7 @@ export default observer( function ProfilePage () {
       userModel.setJWTtoken(localStorage.getItem("JWTtoken"));
     }
     userModel.fetchUserData();
-  }, []);
+  });
 
   return (
     <>
