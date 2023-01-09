@@ -32,38 +32,35 @@ export default function FirstBlockPage() {
                 </div>
               </div>
             </section>
-            
-            <div className="flex justify-center items-center gap-5 text-center">
-							<div className="space-y-3 md:space-y-5 lg:w-2/3">
-								<p className="text-base md:text-lg whitespace-pre-line">{"These days, opportunities for independent creative processes grow exponentially – you can self-publish a book, run a blog, organize a personal exhibition, or launch a new video game.\n\nThe mission of PureCube is to simplify the creation of games by providing game developers and teams tools for collaboration, development, management, and marketing to enable passionate individuals to pursue their dreams with a minimal price to pay in case of failure. Being your boss, working in an inherently aspiring team, and making your vision come true are the factors on which the PureCube is founded."}</p>
-							</div>
-						</div>
 
-						<div className="flex flex-col justify-center items-center text-center gap-3 md:gap-5">
-							<img className="w-auto h-14 md:h-24" src="/logo.svg" alt="logo" />
-							<p className="text-base md:text-lg md:w-4/5 lg:w-2/3">The mission of games by PureCube is to bridge the gap between web 2.0 and web 3.0. We set three priorities to achieve our goal</p>
+						<div>
+							<span className="text-base md:text-lg uppercase">FIRST BLOCK is</span>
+							<p className="text-4xl md:text-5xl uppercase font-heading-semibold whitespace-pre-line">the mini-ecosystem that allows in-game assets in the formats of NFTs and fungible tokens to be dispersed between games, ensuring their continuity</p>
 						</div>
+						<p className="text-4xl md:text-5xl uppercase font-heading-semibold whitespace-pre-line">The mission of games by PureCube is to bridge the gap between web 2.0 and web 3.0. We set three priorities to achieve our goal</p>
 
 						<div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-3">
-							<div className="grid grid-cols-[auto_1fr] gap-3 md:gap-5 items-center bg-neutral-900 p-3 md:p-5 rounded-3xl">
+							<div className="flex flex-col gap-3 md:gap-5">
 								<div className="h-20 w-20 rounded-3xl bg-neutral-800" />
 								<div>
-									<span className="text-lg md:text-xl font-heading-semibold uppercase">Lorem ipsum</span>
-									<p className="text-sm md:text-base">Lorem ipsum dolor sit amet consectetur</p>
+									<span className="text-lg md:text-xl font-heading-semibold uppercase">Open Doors</span>
+									<p className="text-sm md:text-base">Free-to-play</p>
+									<p className="text-sm md:text-base">No crypto wallet needed</p>
 								</div>
 							</div>
-							<div className="grid grid-cols-[auto_1fr] gap-3 md:gap-5 items-center bg-neutral-900 p-3 md:p-5 rounded-3xl">
+							<div className="flex flex-col gap-3 md:gap-5">
 								<div className="h-20 w-20 rounded-3xl bg-neutral-800" />
 								<div>
-									<span className="text-lg md:text-xl font-heading-semibold uppercase">Lorem ipsum</span>
-									<p className="text-sm md:text-base">Lorem ipsum dolor sit amet consectetur</p>
+									<span className="text-lg md:text-xl font-heading-semibold uppercase">Game First</span>
+									<p className="text-sm md:text-base">Fun-to-play</p>
+									<p className="text-sm md:text-base">Attractive graphics</p>
 								</div>
 							</div>
-							<div className="grid grid-cols-[auto_1fr] gap-3 md:gap-5 items-center bg-neutral-900 p-3 md:p-5 rounded-3xl">
+							<div className="flex flex-col gap-3 md:gap-5">
 								<div className="h-20 w-20 rounded-3xl bg-neutral-800" />
 								<div>
-									<span className="text-lg md:text-xl font-heading-semibold uppercase">Lorem ipsum</span>
-									<p className="text-sm md:text-base">Lorem ipsum dolor sit amet consectetur</p>
+									<span className="text-lg md:text-xl font-heading-semibold uppercase">Blockchain</span>
+									<p className="text-sm md:text-base">Play-to-earn</p>
 								</div>
 							</div>
 						</div>
@@ -72,7 +69,7 @@ export default function FirstBlockPage() {
 							<div className="relative pt-[56%] bg-neutral-800 rounded-3xl" />
 							<div className="space-y-3 md:space-y-5">
 								<h2 className="text-2xl md:text-3xl font-heading-semibold uppercase">Play, Mint, Earn, Buy or Sell. Your item - Your choice</h2>
-								<p className="text-base md:text-lg whitespace-pre-line">{"A-Runners are designed to provide play & earn experience. We truly believe in rewarding players for their effort, skill, and loyalty"}</p>
+								<p className="text-base md:text-lg">Chubby Runners are non-fungible tokens designed to provide utility across the FIRST BLOCK ecosystem and entirely in the PURECUBE entertainment platform</p>
 							</div>
 						</div>
 
@@ -80,12 +77,11 @@ export default function FirstBlockPage() {
 
 							<div className="space-y-5 md:space-y-9 order-1 md:order-none">
 
-								<div className="flex items-center gap-3">
-									<div className="h-16 w-16 rounded-3xl bg-neutral-800" />
-									<span className="text-2xl md:text-3xl font-heading-semibold">Runners</span>
+								<div>
+									<h2 className="text-4xl md:text-5xl uppercase font-heading-semibold">Differ from others</h2>
 								</div>
 
-								<h2 className="text-4xl md:text-5xl font-heading-semibold md:whitespace-pre-line">{`Differ from others.\nBring your\ngame characters\ninto play`}</h2>
+								<p className="text-base md:text-lg whitespace-pre-line">{`Bring your game characters into play. Owning Chubby NFT allows you to access all the games with a better experience in the FIRST BLOCK ecosystem`}</p>
 
 								<div className="flex flex-wrap md:flex-row gap-3 md:gap-5">
 									<div className="flex flex-col gap-3 w-36">
@@ -110,24 +106,6 @@ export default function FirstBlockPage() {
 							</div>
 
 							<div className="relative pt-[56%] bg-neutral-800 rounded-3xl" />
-
-						</div>
-
-						<div className="grid grid-cols-2 lg:flex items-center gap-y-5">
-
-							<div className="w-full lg:w-3/12">
-								<img className="w-full select-none" src="/images/support1.png" alt="cover" loading="lazy" />
-							</div>
-
-							<div className="space-y-3 md:space-y-5 text-center w-full lg:w-6/12 col-span-2 -order-1 lg:order-none">
-								<h2 className="text-2xl md:text-3xl font-heading-semibold uppercase whitespace-pre-line">{`Add your NFT collections\nto our games`}</h2>
-								<p className="text-base md:text-lg whitespace-pre-line">{"Are you an NFT collection creator, artist, or game developer? Share more details about your NFTs by clicking the button below so we can discuss how to collaborate with you!"}</p>
-								<LinkButton link="lol">Contact us</LinkButton>
-							</div>
-
-							<div className="w-full lg:w-3/12">
-								<img className="w-full select-none" src="/images/support2.png" alt="cover" loading="lazy" />
-							</div>
 
 						</div>
 
