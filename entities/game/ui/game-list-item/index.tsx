@@ -15,7 +15,7 @@ export const GameListItem = (game: gameModelProps) => {
 				<h3 className="text-2xl md:text-3xl font-heading-semibold uppercase">{game.title}</h3>
 				<p className="text-base md:text-lg">{game.description}</p>
 
-				<div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-5 w-full">
+				<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-5 w-full">
 					<div className="flex flex-col">
 						<span className="text-base md:text-lg font-body-semibold">Genre</span>
 						<span className="text-base md:text-lg uppercase">{game.genre}</span>
@@ -23,10 +23,6 @@ export const GameListItem = (game: gameModelProps) => {
 					<div className="flex flex-col">
 						<span className="text-base md:text-lg font-body-semibold">Platform</span>
 						<span className="text-base md:text-lg uppercase">{game.platform}</span>
-					</div>
-					<div className="flex flex-col">
-						<span className="text-base md:text-lg font-body-semibold">Developer</span>
-						<span className="text-base md:text-lg uppercase">{game.developer}</span>
 					</div>
 					<div className="flex flex-col">
 						<span className="text-base md:text-lg font-body-semibold">Status</span>
