@@ -20,7 +20,7 @@ export const newsListModel: newsListModelProps = makeAutoObservable({
 			title: "Discover the First Block ecosystem in the PureCube",
 			link: "https://pureblock.medium.com/discover-the-first-block-ecosystem-in-the-pureblock-392a7778e9ef",
 			target: "_blank",
-			image: "/images/games/near-runner.jpg",
+			image: "/images/news/003.png",
 			imagePosition: "bottom",
 		},
 		{
