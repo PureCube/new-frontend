@@ -10,10 +10,10 @@ export const teamListModel: teamListModelProps = makeAutoObservable({
 	// STORE
 	advisors: [
 		{
-			name: "Olga Gi",
+			name: "Elyzee De Ville",
 			role: "Advisor, Investment Relations",
 			image: "/images/team/002.png",
-			linkedin: "https://www.linkedin.com/in/olga-gi-zhirova/",
+			linkedin: "https://www.linkedin.com/in/elyzee/",
 		},
 		{
 			name: "EdK",
