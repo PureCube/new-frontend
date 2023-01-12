@@ -2,7 +2,12 @@ import { GameListItem } from "entities/game";
 import { gamesListModel } from "widgets/games";
 import { observer } from "mobx-react-lite";
 
-export const GamesList = observer( () => {
+export interface GamesListProps {
+	bgTransparent?: boolean,
+	showDetails?: boolean,
+}
+
+export const GamesList = observer( ({bgTransparent=false, showDetails=true}: GamesListProps) => {
 	return (
 		<section className="space-y-36">
 			{
@@ -18,6 +23,8 @@ export const GamesList = observer( () => {
 							status={game.status}
 							gameId={game.gameId}
 							cover={game.cover}
+							bgTransparent={bgTransparent}
+							showDetails={showDetails}
 						/>
 					)
 				})

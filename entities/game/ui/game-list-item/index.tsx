@@ -2,11 +2,16 @@ import { gameModelProps } from "entities/game";
 import Image from "next/image";
 import { LinkButton } from "shared/ui";
 
-export const GameListItem = (game: gameModelProps) => {
-	return (
-		<div className="grid grid-cols-1 xl:grid-cols-2 gap-3 md:gap-5 items-center bg-neutral-900 p-3 md:p-5 rounded-3xl">
+export interface GameListItemProps extends gameModelProps {
+	bgTransparent?: boolean,
+	showDetails?: boolean,
+}
 
-			<div className="relative overflow-hidden pt-[56%] bg-neutral-800 rounded-3xl">
+export const GameListItem = (game: GameListItemProps) => {
+	return (
+		<div className={`grid grid-cols-1 xl:grid-cols-2 gap-3 md:gap-5 items-center p-3 md:p-5 rounded-3xl ${game.bgTransparent ? "bg-transparent" : "bg-neutral-900"}`}>
+
+			<div className="relative overflow-hidden pt-[56%] rounded-3xl bg-neutral-800">
 				{game.cover && <Image src={game.cover} layout="fill" objectFit="cover" objectPosition="bottom" alt="cover" />}
 			</div>
 
@@ -15,7 +20,7 @@ export const GameListItem = (game: gameModelProps) => {
 				<h3 className="text-2xl md:text-3xl font-heading-semibold uppercase">{game.title}</h3>
 				<p className="text-base md:text-lg">{game.description}</p>
 
-				<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-5 w-full">
+				<div className={`grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-5 w-full ${game.showDetails ? "grid" : "hidden"}`}>
 					<div className="flex flex-col">
 						<span className="text-base md:text-lg font-body-semibold">Genre</span>
 						<span className="text-base md:text-lg uppercase">{game.genre}</span>

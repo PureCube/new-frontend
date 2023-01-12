@@ -9,8 +9,28 @@ import { Footer } from "widgets/footer";
 import { GamesList } from "widgets/games";
 import { Header } from "widgets/header";
 import { Navbar } from "widgets/navbar";
+import { useEffect } from "react";
 
 export default function FirstBlockPage() {
+
+	useEffect( () => {
+		const callback = function (entries: any) {
+			entries.forEach((entry: any) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("animate-fadeIn");
+				} else {
+					entry.target.classList.remove("animate-fadeIn");
+				}
+			});
+		};
+		const observer = new IntersectionObserver(callback);
+		const targets = document.querySelectorAll(".js-show-on-scroll");
+		targets.forEach(function (target) {
+			target.classList.add("opacity-0");
+			observer.observe(target);
+		});
+	}, [] )
+
   return (
     <>
       <Head>
@@ -38,13 +58,13 @@ export default function FirstBlockPage() {
               </div>
             </section>
 
-						<div>
+						<div className="js-show-on-scroll">
 							<span className="text-base md:text-lg uppercase">FIRST BLOCK is</span>
 							<p className="text-4xl md:text-5xl uppercase font-heading-semibold">the mini-ecosystem that allows in-game assets in the formats of NFTs and fungible tokens to be dispersed between games, ensuring their continuity</p>
 						</div>
-						<p className="text-4xl md:text-5xl uppercase font-heading-semibold">The mission of games by PureCube is to bridge the gap between web 2.0 and web 3.0. We set three priorities to achieve our goal</p>
+						<p className="text-4xl md:text-5xl uppercase font-heading-semibold js-show-on-scroll">The mission of games by PureCube is to bridge the gap between web 2.0 and web 3.0. We set three priorities to achieve our goal</p>
 
-						<div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-3">
+						<div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-3 js-show-on-scroll">
 							<div className="flex flex-col gap-3 md:gap-5">
 								<div className="h-20 w-20 rounded-3xl bg-neutral-800" />
 								<div>
@@ -70,7 +90,7 @@ export default function FirstBlockPage() {
 							</div>
 						</div>
 
-						<div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
+						<div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 js-show-on-scroll">
 							<div className="relative pt-[56%] bg-neutral-800 rounded-3xl" />
 							<div className="space-y-3 md:space-y-5">
 								<h2 className="text-2xl md:text-3xl font-heading-semibold uppercase">Play, Mint, Earn, Buy or Sell. Your item - Your choice</h2>
@@ -78,7 +98,7 @@ export default function FirstBlockPage() {
 							</div>
 						</div>
 
-						<div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
+						<div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 js-show-on-scroll">
 							<div className="space-y-5 md:space-y-9 order-1 md:order-none">
 								<div>
 									<h2 className="text-4xl md:text-5xl uppercase font-heading-semibold">Differ from others</h2>
@@ -106,17 +126,17 @@ export default function FirstBlockPage() {
 							<div className="relative pt-[56%] bg-neutral-800 rounded-3xl" />
 						</div>
 
-						<div className="space-y-3 md:space-y-5">
+						<div className="space-y-3 md:space-y-5 js-show-on-scroll">
 							<h2 className="text-4xl md:text-5xl uppercase font-heading-semibold text-center">Our Games</h2>
-							<GamesList />
+							<GamesList showDetails={false} bgTransparent={true} />
 						</div>
 
-						<div className="space-y-3 md:space-y-5">
+						<div className="space-y-3 md:space-y-5 js-show-on-scroll">
 							<h2 className="text-4xl md:text-5xl uppercase font-heading-semibold text-center">{`And we're not stopping here...`}</h2>
 							<p className="text-base md:text-lg md:w-2/3 text-center mx-auto">Become part of our growing community with exclusive perks, first looks at new game content, and join thousands of players in our invite-only beta. More coming soon</p>
 						</div>
 
-						<div className="flex flex-wrap justify-around sm:justify-start lg:justify-around items-center gap-5">
+						<div className="flex flex-wrap justify-around sm:justify-start lg:justify-around items-center gap-5 js-show-on-scroll">
 
 							<a href={config.discord} target="_blank" rel="noopener noreferrer">
 								<div className="bg-neutral-900 hover:bg-neutral-800 p-3 md:p-5 rounded-3xl w-60 h-40 flex flex-col justify-between">
