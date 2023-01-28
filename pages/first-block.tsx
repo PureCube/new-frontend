@@ -1,15 +1,17 @@
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faMedium, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faDiscord, faMedium, faTwitter, faBitcoin } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpRightFromSquare, faCrown, faHandshakeSimple } from "@fortawesome/free-solid-svg-icons";
 import { config } from "shared/config";
 import { Meta } from "shared/model";
 import { Container, LinkButton, Main } from "shared/ui";
 import { Footer } from "widgets/footer";
-import { GamesList } from "widgets/games";
+import { gamesListModel } from "widgets/games";
 import { Header } from "widgets/header";
 import { Navbar } from "widgets/navbar";
 import { useEffect } from "react";
+import Image from "next/image";
+import { GameListItem } from "entities/game";
 
 export default function FirstBlockPage() {
 
@@ -48,7 +50,7 @@ export default function FirstBlockPage() {
         <Main>
           <div className="space-y-40 pb-40">
 
-            <section className={`relative overflow-hidden flex flex-col justify-center items-center h-[80vh] p-3 md:p-5 rounded-3xl bg-transparent}`}>
+            <section className="relative overflow-hidden flex flex-col justify-center items-center h-[80vh] p-3 md:p-5 rounded-3xl bg-transparent js-show-on-scroll">
               <div className="relative flex flex-col justify-between items-center h-full space-y-3 text-center">
                 <div />
                 <h1 className="text-5xl md:text-7xl leading-normal font-heading-semibold sm:whitespace-pre-line uppercase">The first block <br /> ecosystem</h1>
@@ -86,12 +88,15 @@ export default function FirstBlockPage() {
 								<div>
 									<span className="text-lg md:text-xl font-heading-semibold uppercase">Blockchain</span>
 									<p className="text-sm md:text-base">Play-to-earn</p>
+									<p className="text-sm md:text-base">Enjoy game and earn</p>
 								</div>
 							</div>
 						</div>
 
 						<div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 js-show-on-scroll">
-							<div className="relative pt-[56%] bg-neutral-800 rounded-3xl" />
+							<div className="relative pt-[56%] rounded-3xl">
+								<Image src="/images/frog-first.png" layout="fill" objectFit="cover" alt="cover" />
+							</div>
 							<div className="space-y-3 md:space-y-5">
 								<h2 className="text-2xl md:text-3xl font-heading-semibold uppercase">Play, Mint, Earn, Buy or Sell. Your item - Your choice</h2>
 								<p className="text-base md:text-lg">Chubby Runners are non-fungible tokens designed to provide utility across the FIRST BLOCK ecosystem and entirely in the PURECUBE entertainment platform</p>
@@ -106,15 +111,15 @@ export default function FirstBlockPage() {
 								<p className="text-base md:text-lg">Bring your game characters into play. Owning Chubby NFT allows you to access all the games with a better experience in the FIRST BLOCK ecosystem</p>
 								<div className="flex flex-wrap md:flex-row gap-3 md:gap-5">
 									<div className="flex flex-col gap-3 w-36">
-										<div className="h-9 w-9 rounded-3xl bg-neutral-800" />
+										<FontAwesomeIcon className='w-5' icon={faCrown} />
 										<span className="text-base md:text-lg">333 origin Runner NFTs</span>
 									</div>
 									<div className="flex flex-col gap-3 w-36">
-										<div className="h-9 w-9 rounded-3xl bg-neutral-800" />
+										<FontAwesomeIcon className='w-5' icon={faHandshakeSimple} />
 										<span className="text-base md:text-lg">Breed, upgrade, trade</span>
 									</div>
 									<div className="flex flex-col gap-3 w-36">
-										<div className="h-9 w-9 rounded-3xl bg-neutral-800" />
+										<FontAwesomeIcon className='w-5' icon={faBitcoin} />
 										<span className="text-base md:text-lg">Own & Earn Tokens</span>
 									</div>
 								</div>
@@ -123,12 +128,41 @@ export default function FirstBlockPage() {
 									<LinkButton link="kek" arrow={true} type="secondary">Show on OpenSea</LinkButton>
 								</div>
 							</div>
-							<div className="relative pt-[56%] bg-neutral-800 rounded-3xl" />
+							<div className="relative pt-[56%] rounded-3xl">
+								<Image src="/images/first-first.png" layout="fill" objectFit="cover" alt="cover" />
+							</div>
 						</div>
 
 						<div className="space-y-3 md:space-y-5 js-show-on-scroll">
 							<h2 className="text-4xl md:text-5xl uppercase font-heading-semibold text-center">Our Games</h2>
-							<GamesList showDetails={false} bgTransparent={true} />
+
+							<section className="space-y-36">
+								<GameListItem
+									title={gamesListModel.games[0].title}
+									description={gamesListModel.games[0].description}
+									genre={gamesListModel.games[0].genre}
+									platform={gamesListModel.games[0].platform}
+									developer={gamesListModel.games[0].developer}
+									status={gamesListModel.games[0].status}
+									gameId={gamesListModel.games[0].gameId}
+									cover="/images/king-first.png"
+									bgTransparent={true}
+									showDetails={false}
+								/>
+								<GameListItem
+									title={gamesListModel.games[1].title}
+									description={gamesListModel.games[1].description}
+									genre={gamesListModel.games[1].genre}
+									platform={gamesListModel.games[1].platform}
+									developer={gamesListModel.games[1].developer}
+									status={gamesListModel.games[1].status}
+									gameId={gamesListModel.games[1].gameId}
+									cover={gamesListModel.games[1].cover}
+									bgTransparent={true}
+									showDetails={false}
+								/>
+							</section>
+
 						</div>
 
 						<div className="space-y-3 md:space-y-5 js-show-on-scroll">
