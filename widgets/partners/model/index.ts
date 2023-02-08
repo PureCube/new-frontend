@@ -11,5 +11,8 @@ export const partnersModel: partnersModelProps = makeAutoObservable({
 		{
 			image: "/images/partners/near.svg",
 		},
+		{
+			image: "/images/partners/paras.png",
+		},
 	]
 });
