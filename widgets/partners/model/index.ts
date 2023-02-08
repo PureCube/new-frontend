@@ -9,10 +9,13 @@ export const partnersModel: partnersModelProps = makeAutoObservable({
 	// STORE
 	partnersList: [
 		{
-			image: "/images/partners/near.svg",
+			image: "/images/partners/near2.png",
 		},
 		{
 			image: "/images/partners/paras.png",
+		},
+		{
+			image: "/images/partners/leafes.png",
 		},
 	]
 });
