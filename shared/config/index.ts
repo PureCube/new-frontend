@@ -6,5 +6,5 @@ export const config = {
 	email: "hello@purecube.io",
 	github: "https://github.com/purecube",
 	telegram: "https://t.me/PureCube",
-	mediaKit: "https://drive.google.com/drive/folders/1GEAxFFx19MeGGVdqpw-sR7zRhaHs1_iy?usp=sharing",
+	mediaKit: "https://drive.google.com/drive/folders/1WIkcw0WwdneuKOmxsM0IFtLmNTpMD_Va?usp=sharing",
 }
