@@ -1,7 +1,7 @@
 export const config = {
 	projectName: "PureCube",
 	twitter: "https://twitter.com/purecube_io",
-	medium: "https://medium.com/@pureblock",
+	medium: "https://medium.com/@purecube",
 	discord: "https://discord.gg/KDe48PgnE5",
 	email: "hello@purecube.io",
 	github: "https://github.com/purecube",
